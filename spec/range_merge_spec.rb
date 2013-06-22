@@ -3,7 +3,7 @@ require 'date'
 
 describe Range do
   it "doesn't merge where there's no overlap" do
-    expect((1..10).merge(20..30)).to eq(1..10)
+    expect((1..10).merge(20..30)).to be(nil)
   end
 
   it "merges identical ranges" do

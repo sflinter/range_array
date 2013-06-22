@@ -8,7 +8,7 @@ class Range
     return (r.min .. self.max) if adjoins?(r) || start_overlapped_by?(r)
     return (self.min .. r.max) if adjoined_by?(r) || end_overlapped_by?(r)
 
-    self
+    nil
   end
 
   private
