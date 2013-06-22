@@ -1,6 +1,12 @@
 # RangeArray
 
-TODO: Write a gem description
+This is a very simple subclass of the `Array` class, aimed specifically at supporting `Ranges`, rather than general objects.
+
+When a new range is added to the array (using the `<<` method), the RangeArray ensures that there are no overlapping ranges, and if necessary, merges any overlapping ranges into a single range.
+
+For example, if the RangeArray holds the ranges (1..10) and (20..30), appending the range (5..25) will merge all ranges into a single range (1..30).
+
+At this stage, only the `<<` has been overridden, so no other methods are checked to guard against non-range members.
 
 ## Installation
 

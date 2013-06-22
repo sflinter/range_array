@@ -1,5 +1,3 @@
 require "range_array/version"
-
-module RangeArray
-  # Your code goes here...
-end
+require "range_array/range_array"
+require "range_array/range"
