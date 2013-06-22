@@ -6,6 +6,10 @@ describe Range do
     expect((1..10).merge(20..30)).to be(nil)
   end
 
+  it "returns self where there's no overlap" do
+    expect((1..10).merge!(20..30)).to eq(1..10)
+  end
+
   it "merges identical ranges" do
     expect((1..10).merge(1..10)).to eq(1..10)
   end

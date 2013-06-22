@@ -11,6 +11,10 @@ class Range
     nil
   end
 
+  def merge!(r)
+    merge(r) || self
+  end
+
   private
 
   def fully_overlaps?(r)
