@@ -24,7 +24,26 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+In your `Gemfile`:
+
+```gem range_array```
+
+Simple example:
+
+    require 'range_array'
+    ra = RangeArray.new
+    ra << (1..10)  # [(1..10)]
+    ra << (20..30) # [(1..10), (20..30)]
+    ra << (5..25)  # [(1..30)]
+
+Also works for dates:
+
+    require 'range_array'
+    require 'date'
+    ra = RangeArray.new
+    ra << (Date.parse('2013-01-01') .. Date.parse('2013-05-01'))
+    ra << (Date.parse('2013-10-01') .. Date.parse('2013-12-31'))
+    ra << (Date.parse('2013-04-01') .. Date.parse('2013-11-01')) # [('2013-01-01' .. '2013-12-31')]
 
 ## Contributing
 

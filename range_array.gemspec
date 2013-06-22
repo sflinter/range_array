@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["stephen@flinter.com"]
   spec.description   = %q{Gem to create and manage an array of ranges}
   spec.summary       = %q{Gem to create and manage an array of ranges}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/sflinter/range_array"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
